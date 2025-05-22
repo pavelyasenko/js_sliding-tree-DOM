@@ -1,6 +1,6 @@
 'use strict';
 
-document.addEventListener('click', () => {
+document.addEventListener('DOMContentLoaded', (ev) => {
   const titles = [...document.querySelectorAll('.title')];
 
   titles.forEach((title) => {
@@ -12,12 +12,10 @@ document.addEventListener('click', () => {
       title.style.display = 'none';
     }
 
-    title.addEventListener('click', (e) => {
+    title.addEventListener('click', () => {
       // eslint-disable-next-line no-constant-condition
       childElement.style.display =
         childElement.style.display === 'none' ? 'block' : 'none';
-
-      e.stopPropagation();
     });
   });
 });
