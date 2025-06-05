@@ -1,12 +1,10 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', (ev) => {
-  const titles = [...document.querySelectorAll('.title')];
+  const titles = document.querySelectorAll('.title');
 
   titles.forEach((title) => {
     const childElement = title.nextElementSibling;
-
-    title.style.cursor = 'pointer';
 
     if (childElement && childElement.tagName === 'ul') {
       title.style.display = 'none';
